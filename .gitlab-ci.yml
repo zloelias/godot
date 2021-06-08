@@ -1,4 +1,4 @@
 build-job:
   stage: build
   script:
-    - scons
+    - python version.py
