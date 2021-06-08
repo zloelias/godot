@@ -4,6 +4,6 @@ default:
 build-job:
   stage: build
   before_script:
-    - pip install scons
+    - python -m pip --version
   script:
     - scons
