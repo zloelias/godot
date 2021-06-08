@@ -6,4 +6,4 @@ build-job:
   before_script:
     - pip install scons
   script:
-    - scons -j8 platform=x11
+    - scons -j8 platform=linuxbsd
