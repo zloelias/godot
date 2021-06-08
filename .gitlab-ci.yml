@@ -1,6 +1,6 @@
 build-job:
   stage: build
-  before-script:
+  before_script:
     - pip install scons
   script:
     - scons
