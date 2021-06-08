@@ -5,6 +5,6 @@ build-job:
   stage: build
   before_script:
     - pip install scons
-    - sudo pkg install py37-scons pkgconf xorg-libraries libXcursor libXrandr libXi xorgproto libGLU alsa-lib pulseaudio yasm
+    - pkg install py37-scons pkgconf xorg-libraries libXcursor libXrandr libXi xorgproto libGLU alsa-lib pulseaudio yasm
   script:
     - scons -j8 platform=x11
