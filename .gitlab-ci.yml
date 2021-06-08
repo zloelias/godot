@@ -1,9 +1,9 @@
 default:
-  image: python
+  image: ubuntu
 
 build-job:
   stage: build
   before_script:
-    - pip install scons
+    - apt-get install build-essential scons pkg-config libx11-dev libxcursor-dev libxinerama-dev libgl1-mesa-dev libglu-dev libasound2-dev libpulse-dev libudev-dev libxi-dev libxrandr-dev yasm
   script:
     - scons -j8 platform=linuxbsd
