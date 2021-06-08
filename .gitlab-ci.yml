@@ -1,4 +1,4 @@
 build-job:
   stage: build
   script:
-    scons
+    - echo "Hello, $GITLAB_USER_LOGIN!"
