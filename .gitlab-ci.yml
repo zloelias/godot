@@ -5,5 +5,5 @@ build-job:
   stage: build
   before_script:
     - pip install scons
-script:
+  script:
     - scons -j8 platform=x11
