@@ -1,5 +1,5 @@
 default:
-  image: rsudhakaran/scons_godot
+  image: python
 
 build-job:
   stage: build
