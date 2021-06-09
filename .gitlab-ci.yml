@@ -7,7 +7,7 @@ build-job:
     - alias scons="/usr/bin/env python3 $(which scons)"
     - alias python=python3
     - python --version
-    - rm -f /usr/bin/python2 && ln -s /usr/bin/python2 /usr/bin/python3
+    - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
     - scons -v
     - python --version
   script:
