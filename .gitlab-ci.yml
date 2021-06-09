@@ -5,7 +5,7 @@ build-job:
   stage: build
   before_script:
     - apt-get update && apt-get -y install build-essential scons pkg-config libx11-dev libxcursor-dev libxinerama-dev libgl1-mesa-dev libglu-dev libasound2-dev libpulse-dev libudev-dev libxi-dev libxrandr-dev yasm
-    - alias python=python3
-    - alias scons3="/usr/bin/env python3 $(which scons)" 
+    - virtualenv -p /usr/bin/python3.9
+    - python --version
   script:
-    - alias scons3="/usr/bin/env python3 $(which scons)" && scons3 -j8 platform=linuxbsd
+    - scons -j8 platform=linuxbsd
