@@ -8,6 +8,5 @@ build-job:
     - python --version
     - scons -v
     - python3 --version
-    - /usr/bin/env python3 $(which scons)
   script:
     - python3 scons -j8 use_llvm=yes platform=linuxbsd
