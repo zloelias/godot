@@ -7,4 +7,4 @@ build-job:
     - apt-get update && apt-get -y install build-essential scons pkg-config libx11-dev libxcursor-dev libxinerama-dev libgl1-mesa-dev libglu-dev libasound2-dev libpulse-dev libudev-dev libxi-dev libxrandr-dev yasm
     - alias python=python3
   script:
-    - scons -j8 platform=linuxbsd
+    - alias python=python3 && scons -j8 platform=linuxbsd
