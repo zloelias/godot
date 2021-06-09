@@ -10,4 +10,4 @@ build-job:
     - python3 --version
     - /usr/bin/env python3 $(which scons)
   script:
-    - alias scons="/usr/bin/env python3 $(which scons)" && scons -j8 platform=linuxbsd
+    - python3 scons -j8 use_llvm=yes platform=linuxbsd
