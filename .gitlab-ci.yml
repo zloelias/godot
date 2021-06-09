@@ -8,4 +8,4 @@ build-job:
     - alias python=python3
     - alias scons3="/usr/bin/env python3 $(which scons)" 
   script:
-    - alias scons3="/usr/bin/env python3 $(which scons)" && scons -j8 platform=linuxbsd
+    - alias scons3="/usr/bin/env python3 $(which scons)" && scons3 -j8 platform=linuxbsd
