@@ -1,6 +1,3 @@
-default:
-  image: python
-  
 build-job:
   stage: build
   before_script:
