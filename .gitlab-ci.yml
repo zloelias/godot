@@ -9,3 +9,5 @@ build-job:
     - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
   script:
     - scons platform=linuxbsd
+  artifacts:
+    - build/*
