@@ -4,6 +4,7 @@ default:
 stages:
   - build
   - testing
+  - package
   
 build-job:
   stage: build
@@ -14,7 +15,8 @@ build-job:
   script:
     - mkdir build
     - cd build
-    - scons platform=linuxbsd tests=yes
+    - scons platform=linuxbsd
   artifacts:
     paths:
       - build/*
+
