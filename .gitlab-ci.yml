@@ -14,7 +14,7 @@ build-job:
     - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
   script:
     - mkdir bin
-    - scons platform=server tools=no tests=yes -j$(nproc)
+    - scons platform=linuxbsd tools=no tests=yes -j$(nproc)
   artifacts:
     paths:
       - bin/*
@@ -31,7 +31,7 @@ package-job:
     - gcc --version
     - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
   script:
-    - scons platform=server tools=no -j$(nproc) target=release
+    - scons platform=linuxbsd tools=no -j$(nproc) target=release
     - tar cf godot.tar.gz bin/ --gzip
   artifacts:
     paths:
