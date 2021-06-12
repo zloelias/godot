@@ -1,6 +1,10 @@
 default:
   image: gcc
   
+stages:
+  - build
+  - testing
+  
 build-job:
   stage: build
   before_script:
@@ -8,6 +12,9 @@ build-job:
     - gcc --version
     - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
   script:
-    - scons platform=linuxbsd
+    - mkdir build
+    - cd build
+    - scons platform=linuxbsd tests=yes
   artifacts:
-    - build/*
+    paths:
+      - build/*
