@@ -13,10 +13,8 @@ build-job:
     - gcc --version
     - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
   script:
-    - mkdir build
-    - cd build
-    - scons platform=linuxbsd
+    - mkdir bin
+    - scons platform=linuxbsd tests=yes
   artifacts:
     paths:
-      - build/*
-
+      - bin/*
