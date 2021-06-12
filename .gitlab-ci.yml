@@ -22,7 +22,7 @@ build-job:
 testing-job:
   stage: testing
   script:
-    - ./bin/godot.server.debug.64 --test --test-case-exclude="test_pck_packer" --test-case-exclude="test_image" --test-case-exclude="test_class_db"
+    - ./bin/godot.linuxbsd.debug.64 --test --test-case-exclude="test_pck_packer" --test-case-exclude="test_image" --test-case-exclude="test_class_db"
     
 package-job:
   stage: package
