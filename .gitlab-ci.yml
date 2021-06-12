@@ -14,7 +14,7 @@ build-job:
     - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
   script:
     - mkdir bin
-    - scons platform=linuxbsd tests=yes
+    - scons platform=linuxbsd tools=no tests=yes -j$(nproc)
   artifacts:
     paths:
       - bin/*
