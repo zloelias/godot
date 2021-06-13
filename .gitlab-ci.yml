@@ -26,7 +26,7 @@ testing-job:
     - gcc --version
     - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
   script:
-    - ./bin/godot.linuxbsd.debug.64 --test --test-case-exclude="*[ClassDB]*" --test-case-exclude="*[Image]*" --test-case-exclude="*[PCKPacker]*"
+    - ./bin/godot.linuxbsd.debug.64 --test --test-case="*[String]*"
     
 package-job:
   stage: package
