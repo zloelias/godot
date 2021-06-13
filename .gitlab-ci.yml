@@ -26,7 +26,7 @@ testing-job:
     - gcc --version
     - rm -f /usr/bin/python2 && ln -s /usr/bin/python3 /usr/bin/python2
   script:
-    - ./bin/godot.linuxbsd.debug.64 --test --test-case-exclude="test_pck_packer" --test-case-exclude="test_image" --test-case-exclude="test_class_db"
+    - ./bin/godot.linuxbsd.debug.64 --test --source-file-exclude="test_pck_packer*" --source-file-exclude="test_image*" --source-file-exclude="test_class_db*"
     
 package-job:
   stage: package
